@@ -63,7 +63,7 @@ The LaTeX template for Experiment Report in Modern Physics of Tsinghua Universit
 \usepackage{tabu}
 \usepackage{longtable}
 \usepackage{makecell}
-
+\usepackage{pdfpages}%pdf插入
 
 \setmainfont{Times New Roman}
 
