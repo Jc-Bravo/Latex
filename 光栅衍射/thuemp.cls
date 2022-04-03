@@ -22,7 +22,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{thuemp}
-              [2022/03/07 v1.0
+              [2021/03/28 v1.0
 The LaTeX template for Experiment Report in Modern Physics of Tsinghua University]
 \typeout{Document Class `thuemp' v1.0 by Mingyu Li (2021/03)}
 
@@ -162,7 +162,7 @@ The LaTeX template for Experiment Report in Modern Physics of Tsinghua Universit
 \newcommand\empauthor[2]{
 \author{
 \sihao\kaishu #1   #2 \\[0.1cm]
-\liuhao \kaishu ~~清华大学~~软件学院，北京~~100084\ 
+\liuhao \kaishu ~~清华大学~~物理系，北京~~100084\ 
 }
 }
 
@@ -195,7 +195,7 @@ The LaTeX template for Experiment Report in Modern Physics of Tsinghua Universit
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagestyle{fancy} 
 \fancyhf{}
-\fancyhead[CE]{{\footnotesize 清华大学大学算法设计基础}}
+\fancyhead[CE]{{\footnotesize 清华大学大学物理实验}}
 \fancyhead[LE,RO]{~~~\footnotesize\thepage ~~~}
 \lfoot{}
 \cfoot{}
