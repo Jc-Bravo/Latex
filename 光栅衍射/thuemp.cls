@@ -174,7 +174,10 @@ The LaTeX template for Experiment Report in Modern Physics of Tsinghua Universit
 \noindent\rule{4cm}{.5pt}\\[0.5ex]%
 \hspace*{1em} \liuhao \linespread{0.8}\selectfont
 \parbox{\textwidth}{
-
+\heiti\makebox[\widthof{实}][r]{实}验时间: #1\\
+\heiti\makebox[\widthof{\makebox{*}实}][r]{班级}: #2\\
+\heiti\makebox[\widthof{\makebox{*}实}][r]{循环}组号：#3 \\
+\heiti\makebox[\widthof{\makebox{*}实}][r]{组内}顺序号：#4 \\
 }}
 }
 
