@@ -29,12 +29,41 @@ The LaTeX template for Experiment Report in Modern Physics of Tsinghua Universit
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{ctexart}}
 \ProcessOptions\relax
 
-\LoadClass[twocolumn, twoside, a4paper, UTF8]{ctexart}
+\LoadClass[onecolumn, oneside, a4paper, UTF8]{ctexart}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  packages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% 设置代码%%%%%%%%%%%%%
+\usepackage{listings}
+\usepackage{xcolor}
 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=python 
+}
+
+\lstset{style=mystyle}
 \usepackage{fancyhdr}
 \usepackage{amsmath,amsfonts,amssymb,graphicx}    % EPS 图片支持
 \usepackage{subfigure}   % 使用子图形
@@ -63,6 +92,8 @@ The LaTeX template for Experiment Report in Modern Physics of Tsinghua Universit
 \usepackage{tabu}
 \usepackage{longtable}
 \usepackage{makecell}
+
+
 \usepackage{pdfpages}%pdf插入
 
 \setmainfont{Times New Roman}
@@ -162,7 +193,7 @@ The LaTeX template for Experiment Report in Modern Physics of Tsinghua Universit
 \newcommand\empauthor[2]{
 \author{
 \sihao\kaishu #1   #2 \\[0.1cm]
-\liuhao \kaishu ~~清华大学~~物理系，北京~~100084\ 
+\liuhao \kaishu ~~清华大学~~软件学院，北京~~100084\ 
 }
 }
 
@@ -186,8 +217,8 @@ The LaTeX template for Experiment Report in Modern Physics of Tsinghua Universit
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \fancypagestyle{plain}{ \fancyhf{}\vspace{10pt}
 \lhead{}
-\chead{\vspace{0.6cm}\centering{{\heiti\xiaowuhao 清\ 华\ 大\ 学\ 大\ 学\ 物\ 理\ 实\ 验}\\[-0.5ex]
-{{\xiaowuhao University physics experiments, Tsinghua University}}}}
+\chead{\vspace{0.6cm}\centering{{\heiti\xiaowuhao 清\ 华\ 大\ 学\ 算\ 法\ 分\ 析\ 与\ 设\ 计\ 基\ 础}\\[-0.5ex]
+{{\xiaowuhao Introduction to algorithm, Tsinghua University}}}}
 \rhead{}
 \lfoot{}
 \cfoot{}
@@ -198,7 +229,7 @@ The LaTeX template for Experiment Report in Modern Physics of Tsinghua Universit
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagestyle{fancy} 
 \fancyhf{}
-\fancyhead[CE]{{\footnotesize 清华大学大学物理实验}}
+\fancyhead[CE]{{\footnotesize 清华大学算法分析与设计基础}}
 \fancyhead[LE,RO]{~~~\footnotesize\thepage ~~~}
 \lfoot{}
 \cfoot{}
