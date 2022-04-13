@@ -3,11 +3,8 @@
 - efficient
 - POWERFUL
 - FLEXBLE
-xv6 : Os
-RISV - v : microprocessor (微处理器)
-QEMU : mechine simulator(under linux)
->grep (global search regular expression(RE) and print out the line
-cat（“ concatenate ”的缩写）命令是Linux / Unix等操作系统中最常用的命令之一。 cat命令允许我们创建单个或多个文件，查看文件包含，连接文件以及在终端或文件中重定向输出。
+
+的缩写）命令是Linux / Unix等操作系统中最常用的命令之一。 cat命令允许我们创建单个或多个文件，查看文件包含，连接文件以及在终端或文件中重定向输出。
 ## system calls
 ```C
 //wirtten by JC in 4.4/2022

@@ -62,7 +62,7 @@ The LaTeX template for Experiment Report in Modern Physics of Tsinghua Universit
     showstringspaces=false,
     showtabs=false,                  
     tabsize=2,
-    language=C
+    language=python 
 }
 
 \lstset{style=mystyle}
@@ -170,7 +170,7 @@ The LaTeX template for Experiment Report in Modern Physics of Tsinghua Universit
 \BODY
 }
 
-{\heiti\wuhao \makebox[\widthof{【关键词】}][s]{【关键词】}} \heiti \wuhao \empKeyword
+
 
 \vspace*{1.3cm}}
 \end{center}
