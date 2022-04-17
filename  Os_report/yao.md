@@ -14,3 +14,4 @@
 - Spelling（拼写）
 - Definition（定义，就是他的意思）
 - use in sentence（能在句子中适当的使用）
+
