@@ -9,13 +9,13 @@
          Complex():real(0),imag(0){}
          Complex(int r, int i):real(r),imag(i){cout<<"B";}
          Complex(int r): real(r),imag(0){cout<<"A";}
-       operator int(){
-             return real;
-         }
+         operator int(){
+            return real;
+        }
         //  Complex operator+(const Complex& c){
         //      return Complex(this->real+c.real,this->imag+c.imag);
         //  } 
-     };  
+   };  
     
      int main()
      {

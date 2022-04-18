@@ -1,0 +1,42 @@
+{
+    "A": {
+        "status": "",
+        "constructor": [],
+        "copy_constructor": [],
+        "move_constructor": [],
+        "assignment_operator": [],
+        "move_assignment_operator": []
+    },
+    "B": {
+        "status": "",
+        "constructor": [],
+        "copy_constructor": [],
+        "move_constructor": [],
+        "assignment_operator": [],
+        "move_assignment_operator": []
+    },
+    "C": {
+        "status": "",
+        "constructor": [],
+        "copy_constructor": [],
+        "move_constructor": [],
+        "assignment_operator": [],
+        "move_assignment_operator": []
+    },
+    "D": {
+        "status": "",
+        "constructor": [],
+        "copy_constructor": [],
+        "move_constructor": [],
+        "assignment_operator": [],
+        "move_assignment_operator": []
+    },
+    "E": {
+        "status": "",
+        "constructor": [],
+        "copy_constructor": [],
+        "move_constructor": [],
+        "assignment_operator": [],
+        "move_assignment_operator": []
+    }
+}
