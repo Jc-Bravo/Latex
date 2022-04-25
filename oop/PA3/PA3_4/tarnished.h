@@ -18,8 +18,8 @@ private:
     SomberSmithingStone *somber_smithing_stones[MAX_STONES] ;
 
 public:
-    Tarnished(){};
-    ~Tarnished(){};
+    Tarnished();
+    ~Tarnished();
     void pick_up_stone(int type, int level, int number);
     void pick_up_weapon(int type, string name);
     void upgrade_weapon(int target, string name);

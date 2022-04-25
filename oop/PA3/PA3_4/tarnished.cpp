@@ -1,7 +1,44 @@
 #include"tarnished.h"
-
+#include<iostream>
+using namespace std;
 int NormalWeapon::nwnum = 0;
 int SomberWeapon::swnum = 0;
+    Tarnished::Tarnished(){};
+    Tarnished::~Tarnished(){
+        //normalstone normalweapon
+        for(int i = 0; i<50;i++)
+                {
+                    if(!(normal_smithing_stones[i]==NULL))//需要石头，进行比较
+                    {
+                        if(normal_smithing_stones[i]->greater_myequal(1))
+                        normal_smithing_stones[i]->~NormalSmithingStone();
+
+                    }
+                }
+       for(int i = 0; i<50;i++)
+                {
+                    if(!(somber_smithing_stones[i]==NULL))
+                    {
+                        if(somber_smithing_stones[i]->greater_myequal(1))
+                        somber_smithing_stones[i]->~SomberSmithingStone();
+                    }
+                }
+        if(NormalWeapon::nwnum != 0)
+    {
+        for(int i = 0; i < NormalWeapon::nwnum; i++)
+        {
+            normal_weapons[i]->~NormalWeapon();
+        }
+    }
+    if(SomberWeapon::swnum != 0)
+    {
+        for(int i = 0; i < SomberWeapon::swnum; i++)
+        {
+            somber_weapons[i]->~SomberWeapon();
+        }
+    }
+    };
+
 //捡石头
 void Tarnished::pick_up_stone(int type, int level, int number){
     if(type == 0)
@@ -9,6 +46,12 @@ void Tarnished::pick_up_stone(int type, int level, int number){
             //normal
             if (normal_smithing_stones[level]==NULL) {
                 normal_smithing_stones[level] = new NormalSmithingStone(level);
+                cout<<"Normal smithing stone "<<level<<" was created."<<endl;
+            }
+            else if(!(normal_smithing_stones[level]->greater_myequal(1)))
+            {
+              normal_smithing_stones[level] = new NormalSmithingStone(level); 
+            cout<<"Normal smithing stone "<<level<<" was created."<<endl; 
             }
             normal_smithing_stones[level]->add_myamount(number);
         }
@@ -17,6 +60,12 @@ void Tarnished::pick_up_stone(int type, int level, int number){
             //somber
             if (somber_smithing_stones[level]==NULL) {
                 somber_smithing_stones[level] = new SomberSmithingStone(level);
+                cout<<"Somber smithing stone "<<level<<" was created."<<endl;
+            }
+            else if(!(somber_smithing_stones[level]->greater_myequal(1)))
+            {
+            somber_smithing_stones[level] = new SomberSmithingStone(level);
+            cout<<"Somber smithing stone "<<level<<" was created."<<endl;
             }
             somber_smithing_stones[level]->add_myamount(number);
         }
@@ -29,12 +78,14 @@ void Tarnished::pick_up_weapon(int type, string name){
             //normal
             normal_weapons[NormalWeapon::nwnum] = new NormalWeapon(name);
             NormalWeapon::nwnum++;
+            cout<<"Normal weapon "<<name<<" was created."<<endl;
         }
     else if(type == 1)
         {
             //somber 
             somber_weapons[SomberWeapon::swnum] = new SomberWeapon(name);
             SomberWeapon::swnum++;
+            cout<<"Somber weapon "<<name<<" was created."<<endl;
         }
     return;
 }
@@ -89,7 +140,7 @@ int flag = 0;//判断是否能强化
     if(my_type == 0)
         {
             //首先判断等级
-            if(target < normal_weapons[weaponnum]->get_mylevel())
+            if(target <= normal_weapons[weaponnum]->get_mylevel())
              {cout<<"Stay calm!"<<endl;return;}
             //再判断数量,每级递减，使用数组记录不同等级的石头
             int up_stonelevel = 0;
@@ -107,12 +158,12 @@ int flag = 0;//判断是否能强化
                     if(up_stonenum[i]!=0)//需要石头，进行比较
                     {
                         if(normal_smithing_stones[i] == NULL)
-                        {cout<<"Upgrade failed for lacking normal smithing stone "<<i<<endl;
+                        {cout<<"Upgrade failed for lacking normal smithing stone "<<i<<"."<<endl;
                         return;}
                         if(!normal_smithing_stones[i]->greater_myequal(up_stonenum[i]))
                         //数量不够 错误输出
                             { flag = 1;
-                             cout<<"Upgrade failed for lacking normal smithing stone "<<i<<endl;
+                             cout<<"Upgrade failed for lacking normal smithing stone "<<i<<"."<<endl;
                              return ;
                              }
                     }
@@ -123,17 +174,27 @@ int flag = 0;//判断是否能强化
                up_stonelevel = (i -1)/3+1;
                up_stonenum[up_stonelevel]=2*(3-(up_stonelevel*3 - i));
                normal_smithing_stones[up_stonelevel]->add_myamount(-up_stonenum[up_stonelevel]);
+                if(!normal_smithing_stones[up_stonelevel]->greater_myequal(1))
+                //数量为0 清除
+                {
+                // cout<<"Normal smithing stone "<<up_stonelevel<<" was destroyed."<<endl;
+                normal_smithing_stones[up_stonelevel]->~NormalSmithingStone();
+                }
+
                normal_weapons[weaponnum]->myupgrade();
-               if(!normal_smithing_stones[up_stonelevel]->greater_myequal(1))
-            //数量为0 清除
-            normal_smithing_stones[up_stonelevel]->~NormalSmithingStone();
+               
             }
+            if(right_level == 0)
+            cout<<"Upgrade "<<name<<" to "<<name<<"+"<<target<<" Successfully."<<endl;
+            else
+            cout<<"Upgrade "<<name<<"+"<<right_level<<" to "<<name<<"+"<<target<<" Successfully."<<endl;
+ 
         }
 
     else if (my_type == 1)//判断somber能不能强化
         {
             //首先判断等级
-            if(target < somber_weapons[weaponnum]->get_mylevel())
+            if(target <= somber_weapons[weaponnum]->get_mylevel())
              {cout<<"Stay calm!"<<endl;return;}
             //再判断数量,每级递减，使用数组记录不同等级的石头
             int up_stonelevel = 0;
@@ -151,12 +212,12 @@ int flag = 0;//判断是否能强化
                     if(up_stonenum[i]!=0)//需要石头，进行比较
                     {
                         if(somber_smithing_stones[i] == NULL)
-                        {cout<<"Upgrade failed for lacking somber smithing stone "<<i<<endl;
+                        {cout<<"Upgrade failed for lacking somber smithing stone "<<i<<"."<<endl;
                         return;}
                         if(!somber_smithing_stones[i]->greater_myequal(up_stonenum[i]))
                         //数量不够 错误输出
                             { flag = 1;
-                             cout<<"Upgrade failed for lacking somber smithing stone "<<i<<endl;
+                             cout<<"Upgrade failed for lacking somber smithing stone "<<i<<"."<<endl;
                              return ;
                              }
                     }
@@ -167,11 +228,20 @@ int flag = 0;//判断是否能强化
                up_stonelevel = i;
                up_stonenum[up_stonelevel]= 1;
                somber_smithing_stones[up_stonelevel]->add_myamount(-up_stonenum[up_stonelevel]);
+                // chek numbers
+                 if(!somber_smithing_stones[up_stonelevel]->greater_myequal(1))
+                //数量为0 清除
+                 {           
+                    //   cout<<"Somber smithing stone "<<up_stonelevel<<" was destroyed."<<endl;
+                 somber_smithing_stones[up_stonelevel]->~SomberSmithingStone();}
+            
+                //
                somber_weapons[weaponnum]->myupgrade();
-            // chek numbers
-            if(!somber_smithing_stones[up_stonelevel]->greater_myequal(1))
-            //数量为0 清除
-            somber_smithing_stones[up_stonelevel]->~SomberSmithingStone();
             }
+            if(right_level == 0)
+            cout<<"Upgrade "<<name<<" to "<<name<<"+"<<target<<" Successfully."<<endl;
+            else
+            cout<<"Upgrade "<<name<<"+"<<right_level<<" to "<<name<<"+"<<target<<" Successfully."<<endl;
+ 
         }
 }

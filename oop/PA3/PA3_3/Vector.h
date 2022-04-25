@@ -15,17 +15,9 @@ public:
 	Vector & operator=(const Vector & other);
 	Vector & operator=(Vector && other);
 	Node& operator [] (int pos);
-	void append(int value){
-		array[++len].;
-	}
+	void append(int value);
 	void insert(int pos, int value);
 	void swap(int pos1, int pos2);
 	void dilatation();
 	int getlen();
 };
-class A{
-
-};
-
-A a;
-a

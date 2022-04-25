@@ -25,7 +25,8 @@
         "__config": "cpp",
         "cmath": "cpp",
         "complex": "cpp",
-        "locale": "cpp"
+        "locale": "cpp",
+        "ostream": "cpp"
     },
     "C_Cpp.default.cStandard": "c11",
     "C_Cpp.default.cppStandard": "c++11",
