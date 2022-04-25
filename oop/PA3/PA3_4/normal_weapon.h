@@ -1,27 +1,17 @@
 #pragma once
 #include"weapon.h"
 #include <string>
+#include <iostream>
 class NormalWeapon : public Weapon
 {
 private:
     /* data */
 public:
-    NormalWeapon(string name):Weapon(name){}
+    static int nwnum;
+    NormalWeapon(string name);
     ~NormalWeapon();
-    string get_myname(){
-        return get_name();
-    }
-    int get_mylevel() 
-    {
-        return get_level();
-    }
-    void myupgrade()
-    {
-        upgrade();
-    }   
+    string get_myname();
+    int get_mylevel();
+    void myupgrade();
 };
 
-
-NormalWeapon::~NormalWeapon()
-{
-}

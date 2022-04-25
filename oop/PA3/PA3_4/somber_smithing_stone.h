@@ -5,17 +5,9 @@ class SomberSmithingStone:SmithingStone
 private:
     /* data */
 public:
-    SomberSmithingStone(/* args */);
+    SomberSmithingStone(int level);
     ~SomberSmithingStone();
-    void add_myamount(int amount){add_amount(amount);}
-    bool greater_myequal(int need){greater_equal(need);}
-    int get_mylevel(){get_level();}
+    void add_myamount(int amount);
+    bool greater_myequal(int need);
+    int get_mylevel();
 };
-
-SomberSmithingStone::SomberSmithingStone(/* args */)
-{
-}
-
-SomberSmithingStone::~SomberSmithingStone()
-{
-}

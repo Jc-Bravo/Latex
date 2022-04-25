@@ -5,17 +5,13 @@ class NormalSmithingStone:SmithingStone
 private:
     /* data */
 public:
-    NormalSmithingStone(/* args */);
+    NormalSmithingStone(int level);
     ~NormalSmithingStone();
-    void add_myamount(int amount){add_amount(amount);}
-    bool greater_myequal(int need){greater_equal(need);}
-    int get_mylevel(){get_level();}
+    void add_myamount(int amount);
+    bool greater_myequal(int need);
+    int get_mylevel();
 };
 
-NormalSmithingStone::NormalSmithingStone(/* args */)
-{
-}
 
-NormalSmithingStone::~NormalSmithingStone()
-{
-}
+
+

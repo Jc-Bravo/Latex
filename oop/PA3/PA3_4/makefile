@@ -1,2 +1,2 @@
-main:main.cpp smithing_stone.cpp weapon.cpp
-	g++ main.cpp smithing_stone.cpp weapon.cpp -o main
+main:main.cpp smithing_stone.cpp weapon.cpp somber_weapon.cpp tarnished.cpp Normal_weapon.cpp normal_smithing_stone.cpp somber_smithing_stone.cpp
+	g++ $^ -o main -std=c++11 -g

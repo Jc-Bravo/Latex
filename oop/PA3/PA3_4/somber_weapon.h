@@ -1,28 +1,16 @@
 #pragma once
 #include"weapon.h"
 #include <string>
+#include<iostream>
 class SomberWeapon : public Weapon
 {
 private:
     /* data */
 public:
+    static int swnum;
     SomberWeapon(string name);
     ~SomberWeapon();
-    string get_myname(){
-        return get_name();
-    }
-    int get_mylevel() 
-    {
-        return get_level();
-    }
-    void myupgrade()
-    {
-        upgrade();
-    }
+    string get_myname();
+    int get_mylevel() ;
+    void myupgrade();
 };
-
-SomberWeapon::SomberWeapon(string name): Weapon(name){}
-
-SomberWeapon::~SomberWeapon()
-{
-}
