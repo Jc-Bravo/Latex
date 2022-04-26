@@ -8,8 +8,8 @@ private:
 	int len;
 	Node* array;
 public:
-	Vector(int n):capacity(n){}
-	~Vector(){}
+	Vector(int n);
+	~Vector();
 	Vector(const Vector & other);
 	Vector(Vector && other);
 	Vector & operator=(const Vector & other);
