@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.3.2)  26 APR 2022 20:54
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.3.2)  27 APR 2022 22:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/JC/Desktop/C/English/TempExample
-(/Users/JC/Desktop/C/English/TempExample.tex
+**/Users/JC/Documents/CODE/C/English/TempExample
+(/Users/JC/Documents/CODE/C/English/TempExample.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (./thuemp.cls
 Document Class: thuemp 2021/03/28 v1.0 The LaTeX template for Experiment Report in Modern Physics of Tsinghua University
@@ -1362,17 +1362,17 @@ LaTeX Font Info:    Trying to load font information for U+wasy on input line 4.
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.04628pt on input line 21.
+(Font)              scaled to size 12.04628pt on input line 11.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00085pt on input line 21.
+(Font)              scaled to size 8.00085pt on input line 11.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 21.
+(Font)              scaled to size 6.00064pt on input line 11.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 12.0437pt on input line 21.
+(Font)              scaled to size 12.0437pt on input line 11.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 21.
+(Font)              scaled to size 7.99915pt on input line 11.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 21.
+(Font)              scaled to size 5.99936pt on input line 11.
 
 
 Package fontspec Warning: Font "Kaiti SC" does not contain requested Script
@@ -1404,6 +1404,19 @@ Package fontspec Info: Font family 'KaitiSC(0)' created for font 'Kaiti SC'
 (fontspec)             Bold/OT:language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.00107pt on input line 21.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 6.80072pt on input line 21.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 4.20044pt on input line 21.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 9.99893pt on input line 21.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 6.79927pt on input line 21.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 4.19954pt on input line 21.
+(./TempExample.bbl
 
 Package fontspec Warning: Font "Heiti SC Light" does not contain requested
 (fontspec)                Script "CJK".
@@ -1434,6 +1447,20 @@ Package fontspec Info: Font family 'HeitiSCLight(0)' created for font 'Heiti
 (fontspec)             Light/BI/OT:language=dflt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
+LaTeX Font Info:    Calculating math sizes for size <7.875> on input line 20.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.87584pt on input line 20.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.51305pt on input line 20.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 3.93791pt on input line 20.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 7.87415pt on input line 20.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 5.51187pt on input line 20.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 3.93707pt on input line 20.
+)
 
 Package fancyhdr Warning: \headheight is too small (28.45274pt): 
 (fancyhdr)                Make it at least 37.20534pt, for example:
@@ -1445,19 +1472,17 @@ Package fancyhdr Warning: \headheight is too small (28.45274pt):
 
 
 
-]
-No file TempExample.bbl.
-(./TempExample.aux)
+] (./TempExample.aux)
 Package rerunfilecheck Info: File `TempExample.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 36505 strings out of 476919
- 733147 string characters out of 5821841
- 1156611 words of memory out of 5000000
- 55780 multiletter control sequences out of 15000+600000
- 417743 words of font info for 148 fonts, out of 8000000 for 9000
+ 36631 strings out of 476919
+ 736630 string characters out of 5821841
+ 1169790 words of memory out of 5000000
+ 55871 multiletter control sequences out of 15000+600000
+ 430497 words of font info for 223 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 115i,11n,118p,1281b,739s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 115i,11n,118p,1288b,739s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on TempExample.pdf (1 page).

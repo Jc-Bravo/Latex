@@ -218,7 +218,7 @@ The LaTeX template for Experiment Report in Modern Physics of Tsinghua Universit
 \fancypagestyle{plain}{ \fancyhf{}\vspace{10pt}
 \lhead{}
 \chead{\vspace{0.6cm}\centering{{\heiti\xiaowuhao Tsinghua University}\\[-0.5ex]
-{{\xiaowuhao ENGLISH FOR ACADEMIC PUPROSES}}}}
+{{\xiaowuhao ENGLISH FOR ACADEMIC PURPOSE}}}}
 \rhead{}
 \lfoot{}
 \cfoot{}
